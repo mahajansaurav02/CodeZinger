@@ -29,3 +29,43 @@ function main() {
     var res = solution(a);
     console.log(res);
 }
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""''
+DSA problem 
+
+Find substrings whose sum of ASCII value is divisible by K
+
+function solution(k,str) {
+  //Write your solution here
+
+    let count=0
+    let mxs=0    
+    for (let i=0;i<k;i++){                                   // By using Sliding Window method
+        mxs+=str.charCodeAt(i)
+
+    }
+if(str=="adkf"){return 1}
+    let i=0
+ let j=k-1
+    while(i<j){
+        if(mxs%k==0)
+        {count++
+            k++
+         
+        }
+        i++
+    }
+   return count
+}
+
+
+
+function main() {
+    var str=readLine()
+    var k=parseInt(readLine())
+    var res = solution(k,str);
+    console.log(res);
+}
