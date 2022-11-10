@@ -69,3 +69,31 @@ function main() {
     var res = solution(k,str);
     console.log(res);
 }
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+DSA q 
+
+** Largest sum of contiguous sub-array
+
+function solution(a,arr) {
+  //Write your solution here
+    let min=0;
+    let sum=-100
+    
+    for(let i=0;i<a;i++){
+        // console.log(arr)
+        min=min+arr[i]
+    if(min<arr[i]){
+        min=arr[i]
+    } 
+        if(sum<min){
+            sum=min
+        }
+        
+    }
+    return sum
+}
+
+
+
+
